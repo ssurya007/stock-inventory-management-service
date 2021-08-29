@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "79a24bed-6938-4599-a2d2-0cc610e8a51d",
+		"name": "sock inventory managemet service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create stock",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "version",
+						"value": "1.0",
+						"type": "text"
+					},
+					{
+						"key": "transactionId",
+						"value": "123232132333",
+						"type": "text"
+					},
+					{
+						"key": "reqChannel",
+						"value": "IB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"stockNumber\" : \"1\",\r\n    \"stockName\" : \"aaaa\",\r\n    \"purchasingPrice\" : 1000,\r\n    \"purchaseDate\" : \"2021-08-28\",\r\n    \"quantity\" : 1000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/stock-inventory-management-service/stock/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"stock-inventory-management-service",
+						"stock",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get stock by name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "version",
+						"value": "1.0",
+						"type": "text"
+					},
+					{
+						"key": "transactionId",
+						"value": "123232132111",
+						"type": "text"
+					},
+					{
+						"key": "reqChannel",
+						"value": "IB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/stock-inventory-management-service/stock/get/Microsoft",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"stock-inventory-management-service",
+						"stock",
+						"get",
+						"Microsoft"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update stock",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "version",
+						"value": "1.0",
+						"type": "text"
+					},
+					{
+						"key": "transactionId",
+						"value": "123232132567",
+						"type": "text"
+					},
+					{
+						"key": "reqChannel",
+						"value": "MB",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"stockNumber\" : \"1\",\r\n    \"purchasingPrice\" : 100000,\r\n    \"purchaseDate\" : \"2021-08-28\",\r\n    \"quantity\" : 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8088/stock-inventory-management-service/stock/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"stock-inventory-management-service",
+						"stock",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
