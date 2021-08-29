@@ -18,3 +18,6 @@ all values in request body are mandatory for all 3 endpoints
 
 date format ---- yyyy-MM-dd (eg: 2021-08-28)
 
+NOTE:
+Added postman collection file in this repo. please use it to evaluate endpoints functionalilty 
+
